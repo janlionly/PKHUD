@@ -30,7 +30,7 @@ open class PKHUDAssets: NSObject {
             // Load image in cases where PKHUD is integrated via cocoapods as a dynamic or static framework with a separate resource bundle
             return image
         }
-
-        return UIImage()
+        let image = UIImage(named: name)
+        return image ?? UIImage()
     }
 }
